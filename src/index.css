@@ -1,0 +1,357 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+
+  
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin-top: 60px;
+  display: flex;
+  place-items: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.navbar {
+  background-color: white;
+  z-index: 999;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.logo img{
+  position: relative;
+  height: 50px;
+  width: 80px;
+  
+}
+.menu ul {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: black;
+  
+}
+
+.menu li{
+  font-size: 20px;
+  margin-right: 20px;
+  display: flex;
+  align-self: center;
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+}
+.connect {
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-image:  linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+}
+.connect a {
+  color: white !important;
+}
+.menu a:hover {
+  color: blue;
+  transition: transform 250ms;
+  cursor: pointer;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+
+}
+.intro p {
+  color: rgb(29, 28, 28);
+  font-size: 40px;
+  font-weight: bold;
+
+}
+.intro img {
+  margin-top: 60px;
+  border-radius: 100%;
+  max-width: 400px;
+}
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.social img {
+  height: 40px;
+  width: 40px;
+  margin: 10px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .icon {
+    display: block  !important;
+  }
+  .icon-x {
+    display: none;
+  }
+  .navbar ul{
+    display: none;
+  }
+  .navbar.responsive-nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    z-index: 999; /* Ensure it's above other content */
+  }
+  .navbar.responsive-nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar.responsive-nav .icon{
+    display: none !important;
+  }
+  .navbar.responsive-nav .iconx {
+    position: fixed;
+    padding: 10px;
+    top: 0px;
+    right: 0px;
+    color: white;
+  }
+
+  .navbar.responsive-nav .logo {
+    display: none !important;
+  }
+  .navbar.responsive-nav a{
+    text-decoration: none !important;
+    color: white !important;
+  }
+  .navbar.responsive-nav a.active {
+    text-decoration: none !important;
+    color: white !important;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu.active li {
+    display: block;
+  }
+
+  .intro {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about {
+    flex-direction: column !important;
+  }
+  .edu-card {
+    flex-direction: column;
+  }
+}
+.info {
+  padding: 10px;
+  background-color: rgb(41, 40, 40);
+  border-radius: 20px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.info img {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+}
+.info p {
+  width: 60%;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(41, 40, 40);
+  width: 300px;
+  min-height: 400px;
+
+}
+.card a{
+  text-decoration: none;
+  color: white;
+}
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 250ms ease-in;
+}
+.project-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  column-gap: 1.33%;
+  row-gap: 30px;
+
+}
+.project {
+  margin-top: 20px;
+}
+.project h1 , .skill h1 {
+  color: black;
+}
+.skill-card {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(41, 40, 40);
+  max-width: 300px;
+  min-height: 400px;
+  margin: 0 auto;
+  
+}
+.skill-card:hover {
+  transform: scale(1.02);
+  transition: transform 250ms ease-in;
+}
+.skill-card-div {
+  column-gap: 1.33%;
+  row-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill-card img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+}
+.checkbutton {
+  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+.menu a{
+  color: black;
+  text-decoration: none;
+}
+.menu a.active {
+  color: blue !important;
+  text-decoration: underline !important;
+  text-underline-offset: 28px ;
+}
+.self-image {
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 100%;
+  margin: 30px;
+}
+.about-text {
+  color: black;
+  font-size: 25px;
+  
+}
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.edu-card {
+  display: flex;
+  column-gap: 1.5%;
+
+}
+.edu-card-details{
+  color: black;
+}
+.edu-card img {
+  max-width: 300px;
+  clip-path: circle();
+  margin: 0 auto;
+}
+.edu-card-details p{
+  font-size: 20px;
+}
+.education {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.icon {
+  background-color: transparent !important;
+  color: black;
+  background: black;
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  padding: 15px 40px;
+}
+.icon > * {
+  height: 35px;
+  width: 30px;
+}
