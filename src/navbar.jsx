@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import logo from './assets/logo.jpg';
+import logo from './assets/portfolio.png';
 import menu from './assets/menu.png';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -10,8 +10,8 @@ function Navbar() {
   return (
     <header>
       <nav className="navbar">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+        <div className="logo" >
+          <img src={logo} alt="logo" width="10" height="5"/>
         </div>
         <div className="menu">
           <ul>
