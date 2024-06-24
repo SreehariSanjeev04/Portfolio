@@ -146,9 +146,7 @@ button:focus-visible {
   .icon {
     display: block  !important;
   }
-  .iconx {
-    display: none;
-  }
+  
   .navbar ul{
     display: none;
   }
@@ -168,14 +166,6 @@ button:focus-visible {
   }
   .navbar.responsive-nav .icon{
     display: none !important;
-  }
-  .navbar.responsive-nav .iconx {
-    position: fixed;
-    display: inline-block;
-    padding: 10px;
-    top: 0px;
-    right: 0px;
-    color: white;
   }
 
   .navbar.responsive-nav .logo {

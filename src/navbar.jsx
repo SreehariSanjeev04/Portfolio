@@ -7,6 +7,11 @@ function Navbar() {
   function toggle() {
     document.querySelector(".navbar").classList.toggle("responsive-nav"); 
   }
+  function removeOverlay() {
+    if(document.querySelector('.navbar').classList.contains('responsive-nav')){
+      document.querySelector('.navbar').classList.remove('responsive-nav');
+    }
+  }
   return (
     <header>
       <nav className="navbar">
@@ -16,22 +21,22 @@ function Navbar() {
         <div className="menu">
           <ul>
             <li>
-              <NavLink exact to="/" activeClassName="active">
+              <NavLink exact to="/" activeClassName="active" onClick={removeOverlay}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" activeClassName="active">
+              <NavLink to="/about" activeClassName="active" onClick={removeOverlay}>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/education" activeClassName="active">
+              <NavLink to="/education" activeClassName="active" onClick={removeOverlay}>
                 Education
               </NavLink>
             </li>
             <li>
-              <button className="connect"><a href='https://www.linkedin.com/in/sreehari-sanjeev-a657551a9/' target='_blank'>Connect</a>
+              <button className="connect" onClick={removeOverlay}><a href='https://www.linkedin.com/in/sreehari-sanjeev-a657551a9/' target='_blank'>Connect</a>
               
               </button>
             </li>
@@ -39,9 +44,6 @@ function Navbar() {
         </div>
         <a href="javascript:void(0);" className="icon" onClick={toggle}>
         <GiHamburgerMenu />
-        </a>
-        <a href="javascript:void(0);" className="iconx" onClick={toggle}>
-        <IoMdClose />
         </a>
       </nav>
     </header>
