@@ -7,6 +7,9 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #ffffff;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 a {
   text-decoration: none;
@@ -199,6 +202,7 @@ button:focus-visible {
   }
 }
 .info {
+  color: white;
   padding: 10px;
   margin: 0 0.5em 0 0.5em;
   background-color: rgb(41, 40, 40);
@@ -223,6 +227,7 @@ button:focus-visible {
   padding: 10px;
 }
 .card {
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
