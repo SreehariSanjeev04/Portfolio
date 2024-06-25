@@ -261,6 +261,7 @@ button:focus-visible {
   color: black;
 }
 .skill-card {
+  color: white;
   border-radius: 20px;
   padding: 20px;
   background-color: rgb(41, 40, 40);
